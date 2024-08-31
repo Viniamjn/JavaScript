@@ -122,14 +122,15 @@ console.log(arrSwap);
 console.log('--------------------------------------------------------------------------')
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:25},{currency:'EUR',value:42}],'USD') // => 400
-function exchange(sumUAH,currencyValues,exchangeCurrency){
-    if(currencyValues==='USD'){
-        console.log((sumUAH / exchangeCurrency).toFixed(2),'$');
-
-    }else if(currencyValues==='EUR'){
-        console.log((sumUAH / exchangeCurrency).toFixed(2),'€');
-    }else(
-        console.log('Помилка')
-    )
+function exchange(sumUAH,currencyValues){
+    let exchangeRate=[
+        {currency:'USD',value:41.06},
+        {currency:'EUR',value:45.50}
+    ];
+    for (const item of exchangeRate) {
+    if(currencyValues===item.currency){
+        console.log((sumUAH / item.value).toFixed(2),'$');
+    }
+    }
 }
-exchange(10000,'USD',45.50);
+exchange(10000,'USD');
