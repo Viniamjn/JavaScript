@@ -1,0 +1,136 @@
+/*user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки, по центру.
+блоки з короткою іфною про post - в ряд по 5 */
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#userDetailsContainer {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+    column-gap: 5vw;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    width: 70vw;
+    height: 40vh;
+}
+#userDetailsContainer p {
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 4px solid #3498db;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+#userDetailsContainer h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+#fetchPostsBtn {
+    width: 90vw;
+    height: 10vh;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 3vh 0 3vh 0;
+}
+#fetchPostsBtn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+#fetchPostsBtn:active {
+    background-color: #1c598a; /
+    transform: translateY(0);
+}
+#postList{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(5,5vh);
+    column-gap: 20vw;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#postList li {
+    margin-bottom: 10px;
+}
+#postList a {
+    display: block;
+    padding: 15px 20px;
+    color: #3498db;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
+}
+#postList a:hover {
+    background-color: #f0f8ff;
+    color: #2980b9;
+    transform: scale(1.05);
+}
+
+
+#postList a:active {
+    background-color: #e0e6ed;
+    color: #1c598a;
+    transform: scale(0.98);
+}
+#btn-bk {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 70vw;
+}
+#back-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 6vh 0 3vh 0;
+}
+#back-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+#back-button:active {
+    background-color: #1c598a;
+    transform: translateY(0);
+}

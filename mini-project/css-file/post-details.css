@@ -1,0 +1,114 @@
+/*post-details.html - блок з інфою про пост зверху. Коментарі - по 4 в ряд.*/
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#postList {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    line-height: 1.6;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+#postList:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+#postList span {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+#postList p {
+    margin: 10px 0;
+    border-bottom: 2px solid #3498db;
+    font-size: 1rem;
+}
+#back-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 6vh 0 3vh 0;
+}
+#back-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+#back-button:active {
+    background-color: #1c598a;
+    transform: translateY(0);
+}
+
+#commentsContainer {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+
+#commentsContainer span {
+    font-size: 1.3rem;
+    margin:0 5px 20px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+
+}
+#commentsContainer p{
+    margin: 0 0 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+#commentsContainer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+#commentsContainer ul li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+}
+
+#commentsContainer ul li:hover {
+    background-color: #f0f8ff;
+    transform: translateY(-2px);
+    border: 1px solid #3498db;
+}
+
+
+
